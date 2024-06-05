@@ -1,0 +1,2 @@
+# wslog
+Wrapper for slog
