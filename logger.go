@@ -8,7 +8,7 @@ import (
 
 func New(asJson bool, level slog.Leveler) *slog.Logger {
 	var handler slog.Handler
-	handler = slog.NewTextHandler(os.Stdout, &slog.HandlerOptions{Level: level}) //slog.LevelDebug
+	handler = NewHandler(os.Stdout, &Options{Level: level})
 	if asJson {
 		handler = slog.NewJSONHandler(os.Stdout, &slog.HandlerOptions{Level: level})
 	}
